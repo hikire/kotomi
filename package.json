@@ -1,0 +1,19 @@
+{
+  "name": "kotomi-chan",
+  "version": "0.1.0",
+  "description": "Change wallpaper peacefully",
+  "bin": {
+    "kotomi": "./cli.js"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/hikire/kotomi",
+  "author": "hikire <hikiML.re@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "carlo": "^0.9.43",
+    "jimp": "^0.6.0",
+    "lozad": "^1.7.0",
+    "meow": "^5.0.0",
+    "wallpaper": "^4.1.0"
+  }
+}

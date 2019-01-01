@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-size: 0px;
+  background: rgba(160, 160, 160, 0.85);
+}
+
+img {
+  width: 100%;
+  min-height: 200px;
+  background: rgba(160, 160, 160, 0.85);
+}
