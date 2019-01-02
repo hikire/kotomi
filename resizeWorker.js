@@ -1,5 +1,6 @@
 const os = require("os");
 const childProcess = require("child_process");
+const path = require("path");
 
 let forksLimit = Math.min(3, os.cpus().length);
 let forks = 0;
@@ -19,7 +20,7 @@ async function createForkIfPossible() {
 }
 
 function createFork({ imagePath, cachePath, width, resolve, reject }) {
-  const fork = childProcess.fork("./resizeProcess.js");
+  const fork = childProcess.fork(path.join(__dirname, "/resizeProcess.js"));
   forks++;
   fork.on("message", handleResult.bind({ fork, resolve, reject }));
   fork.on("error", error => console.error("P:", error));
