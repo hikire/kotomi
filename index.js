@@ -30,7 +30,7 @@ async function main(options) {
   });
   app.on("exit", () => process.exit());
   await app.serveFolder(__dirname);
-  await app.serveFolder(`${__dirname}/node_modules`, "node_modules");
+  await app.serveFolder(path.dirname(require.resolve("lozad")), "lozad");
 
   await app.exposeFunction("getPictures", async () => {
     try {
